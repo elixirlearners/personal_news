@@ -40,3 +40,8 @@ Not determined:
  - Whether the views will be fully static, or allow interaction.
  - How the onboarding flow should work (eventually this should be a hosted app
    that can support enrollment by non-Elixir devs)
+
+Example/mockup:
+![mockup-personal-news](https://github.com/elixirlearners/personal_news/assets/1295934/f0261daf-ceb7-489c-94cc-3cb680b81f5c)
+
+
