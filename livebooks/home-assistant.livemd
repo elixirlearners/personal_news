@@ -1,7 +1,7 @@
 # Personal News Livebook
 
 ## Section
-
+Run this just one time, and if making updates, click the Runtime settings and do a disconnect -> reconnect cycle before running it again
 ```elixir
 Mix.install([
   {:httpoison, "~> 2.1.0"},
