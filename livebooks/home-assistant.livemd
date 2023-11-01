@@ -1,0 +1,32 @@
+# Personal News Livebook
+
+## Section
+
+```elixir
+Mix.install([
+  {:httpoison, "~> 2.1.0"},
+  {:jason, "~> 1.4"}
+])
+```
+
+This is a section, starting to define HA integration
+
+```elixir
+token = System.get_env("HA_BEARER_TOKEN")
+ctyp = "Application/json; Charset=utf-8"
+headers = [Authorization: "Bearer #{token}", "Content-Type": ctyp]
+url = "http://hestia.local:8123/api/states/light.kitchen_corner"
+
+response = HTTPoison.get!(url, headers)
+```
+
+```elixir
+url = "http://hestia.local:8123/api/services/light/toggle"
+
+body =
+  Jason.encode!(%{
+    entity_id: "light.kitchen_corner"
+  })
+
+response = HTTPoison.post(url, body, headers)
+```
